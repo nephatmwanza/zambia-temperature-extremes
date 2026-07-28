@@ -30,16 +30,18 @@ the same figure for rainfall.*
 | TX90p — days above the 90th percentile | +0.72 % | 0.19 | 2 of 10 |
 | WSDI — warm-spell days | −0.19 days | 0.81 | 0 of 10 |
 
-Across the grid, after false-discovery-rate control at q = 0.10:
+Across the grid, after false-discovery-rate control at q = 0.10. The middle column is the
+**strictly like-for-like** comparison: the same ONDJFM window, the same 45 seasons and the
+same cells as the rainfall study, so nothing but the variable differs.
 
-| | Grid cells surviving FDR |
-|---|---|
-| TXx | **987** of ~1,009 |
-| SU35 | **720** |
-| TXm | 327 |
-| TX90p | 125 |
-| WSDI | 0 |
-| **every rainfall index** | **0** |
+| | ONDJFM season *(directly comparable)* | Full calendar year |
+|---|---|---|
+| TXx | **969** of ~1,009 cells | 987 |
+| SU35 | **669** | 720 |
+| TXm | 131 | 327 |
+| TX90p | 108 | 125 |
+| WSDI | — *(annual only)* | 0 |
+| **every rainfall index** | **0** | — |
 
 ## Why this makes the rainfall result *more* credible, not less
 
@@ -47,8 +49,8 @@ This is the part worth dwelling on.
 
 A null result always invites the question: *was the test simply too weak, or the pipeline
 broken?* Running the same code, over the same country, the same 45 years, the same baseline
-and the same corrections — and finding **987 significant cells for temperature against zero
-for rainfall** — answers it. The method detects trends perfectly well when they are there.
+and the same corrections — and finding **969 significant cells for temperature against zero
+for rainfall, in the very same ONDJFM window** — answers it. The method detects trends perfectly well when they are there.
 Zambia's rainfall genuinely has no detectable monotonic trend over this record; its
 temperature emphatically does.
 
