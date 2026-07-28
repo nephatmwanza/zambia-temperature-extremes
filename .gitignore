@@ -1,0 +1,28 @@
+# Raw source data - multi-GB continental NetCDF, re-downloadable.
+# See scripts/01_prepare_data.sh for provenance and download source.
+data/raw/
+
+# Large clipped daily record. Regenerate with scripts/01_prepare_data.sh.
+data/processed/era5_tmax_zambia_*.nc
+
+# Working intermediates from the index script (the heat directory reaches ~185 MB)
+data/processed/heat/
+data/processed/agg_tmp/
+
+# Full-precision boundary files. The simplified province outlines used for plotting
+# ARE committed; these are the heavyweight originals, rebuilt by script 02.
+boundaries/zambia_districts_wgs84.geojson
+boundaries/zambia_country_wgs84.geojson
+boundaries/NSDI_Zambia_Districts_*
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+env/
+
+# OS / editor
+.DS_Store
+.claude/
+*.swp

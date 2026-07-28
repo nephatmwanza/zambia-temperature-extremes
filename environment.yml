@@ -1,0 +1,41 @@
+# Environment for the Zambia Climate Extremes analysis.
+#
+#   conda env create -f environment.yml
+#   conda activate zambia-climate
+#   python -m ipykernel install --user --name zambia-climate \
+#          --display-name "Python (Zambia Climate)"
+#
+# The analysis notebook needs only the core scientific stack - it reads boundaries
+# straight from GeoJSON with the standard-library json module, so geopandas is NOT
+# required to reproduce the analysis. geopandas/rasterio are listed because
+# scripts/02_make_boundaries_and_masks.py uses them to build the masks, but that step's
+# outputs are committed, so you can skip it (and them) entirely.
+#
+# CDO is the workhorse for the NetCDF steps (scripts 01, 03, 04). It is available from
+# conda-forge as below; a system install (apt install cdo) works equally well.
+name: zambia-climate
+
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.11
+
+  # core analysis - all the notebook needs
+  - numpy>=1.24
+  - pandas>=2.0
+  - scipy>=1.10
+  - matplotlib>=3.7
+  - netcdf4>=1.6
+
+  # notebook
+  - jupyter
+  - ipykernel
+
+  # NetCDF processing (scripts 01, 03, 04). Drop if you use a system cdo.
+  - cdo>=2.2
+
+  # mask building only (script 02) - skip if using the committed masks
+  - geopandas>=0.14
+  - rasterio>=1.3
+  - shapely>=2.0
