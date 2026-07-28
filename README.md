@@ -215,6 +215,7 @@ reproduce the analysis** (only to rebuild the mask in step 2, whose output is co
 | | |
 |---|---|
 | [**zambia-rainfall-extremes**](https://github.com/nephatmwanza/zambia-rainfall-extremes) | The companion study. CHIRPS rainfall, same period, same pipeline — and the opposite result. |
+| [**zambia-cmip6-evaluation**](https://github.com/nephatmwanza/zambia-cmip6-evaluation) | Whether 29 CMIP6 models can reproduce the observed rainy season. Mostly they cannot. |
 
 ## Licence
 
